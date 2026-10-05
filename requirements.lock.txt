@@ -1,0 +1,33 @@
+# SparseForge fully-pinned lockfile
+#
+# 用途：CI / Docker / 论文复现用的精确版本锁定。
+# 版本来源：本机实测环境 `pip freeze`（Python 3.13.14, win_amd64），
+#         与 docs/env_report.md §3.3 的探测矩阵一致。
+# 生成时间基准：SparseForge v0.1.0
+#
+# 安装：
+#   pip install -r requirements.lock.txt
+#
+# 注意：本文件严禁出现任何本机绝对路径或 URL 形式的本地引用（跨机器不可复现）。
+
+# --- 直接依赖（已钉死）---
+numpy==2.5.3
+scipy==1.18.1
+scikit-learn==1.9.1
+
+# --- 开发/测试依赖（已钉死）---
+pytest==9.1.1
+pytest-cov==7.1.0
+ruff==0.16.10
+
+# --- 传递依赖（一并锁定以保证可复现）---
+cloudpickle==3.1.2
+colorama==0.4.6
+coverage==7.16.2
+iniconfig==2.3.0
+joblib==1.6.0
+narwhals==2.26.0
+packaging==26.3
+pluggy==1.6.0
+Pygments==2.21.0
+threadpoolctl==3.7.0

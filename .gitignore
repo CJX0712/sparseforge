@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# 工具缓存
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# 环境
+.venv/
+venv/
+env/
+
+# 产物
+artifacts/
+outputs/
+runs/
+*.log
+benchmark.json
+coverage.xml
+
+# 临时探针脚本（根目录一次性诊断脚本，勿入库）
+_probe*.py
+_diag.py
+_exp*.py
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 作者：晨星

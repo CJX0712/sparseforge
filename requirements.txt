@@ -1,0 +1,17 @@
+# SparseForge runtime requirements (loose ranges)
+#
+# 用途：开发/本地安装的宽松依赖清单。允许 pip 解析到满足下限的较新版本。
+# 可复现的精确版本请改用 requirements.lock.txt。
+#
+# 安装：
+#   pip install -r requirements.txt
+#
+# 注意：本文件严禁出现任何本机绝对路径或 URL 形式的本地引用（跨机器不可复现）。
+
+# --- Tier-1 必需：纯 numpy 科学计算栈 ---
+numpy>=2.0
+scipy>=1.13
+
+# --- Tier-0 可选后端：sklearn 求解器（sk_omp / sk_lasso / sk_lars）---
+# 缺失时 pipeline 自动降级为纯 numpy 基线，不报错。
+scikit-learn>=1.5
